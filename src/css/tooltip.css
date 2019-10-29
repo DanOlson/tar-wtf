@@ -1,0 +1,27 @@
+.tip {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: -2rem;
+  right: -20px;
+  height: 30px;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  color: #fff;
+  z-index: 400;
+  margin-top: inherit;
+  margin-left: inherit;
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
