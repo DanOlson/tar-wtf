@@ -46,7 +46,7 @@ function Terminal ({ command }) {
         data-clipboard-text={command.trim()}
         style={buttonStyle}
         onSuccess={showCopied}>
-        <span className='icon-clippy' />
+        <span className='icon-clippy' style={{ fontSize: 'x-large' }} />
       </Clipboard>
       <pre style={codeStyle}>
         <code>> {command}</code>
