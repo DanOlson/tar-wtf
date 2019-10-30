@@ -1,0 +1,8 @@
+.command-line-builder {
+  margin-top: 2rem;
+}
+
+.command-line-builder label.selection-label {
+  font-size: 0.9em;
+  font-weight: bold;
+}

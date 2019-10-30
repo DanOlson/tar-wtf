@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Terminal from './terminal'
-import ModeSelector from './mode-selector';
-import CompressionSelector from './compression-selector';
-import VerboseSelector from './verbose-selector';
-import AdvancedOptionsSelector from './advanced-options-selector';
+import ModeSelector from './mode-selector'
+import CompressionSelector from './compression-selector'
+import VerboseSelector from './verbose-selector'
+import AdvancedOptionsSelector from './advanced-options-selector'
+import '../css/command-line-builder.css'
 
 function CommandLineBuilder () {
   const [mode, setMode] = useState('x');
@@ -35,27 +36,33 @@ function CommandLineBuilder () {
   }
 
   return (
-    <>
+    <div className='command-line-builder container'>
       <form>
-        <ModeSelector
-          currentMode={mode}
-          onChange={handleModeChange}
-        />
-        <CompressionSelector
-          currentCompression={compression}
-          onChange={handleCompressionChange}
-        />
-        <VerboseSelector
-          isVerbose={verbose}
-          onChange={handleVerboseChange}
-        />
-        <AdvancedOptionsSelector
-          isAdvanced={advanced}
-          onChange={handleAdvancedChange}
-        />
+        <div class='row'>
+          <ModeSelector
+            currentMode={mode}
+            onChange={handleModeChange}
+            className='col-sm-3'
+          />
+          <CompressionSelector
+            currentCompression={compression}
+            onChange={handleCompressionChange}
+            className='col-sm-3'
+            />
+          <VerboseSelector
+            isVerbose={verbose}
+            onChange={handleVerboseChange}
+            className='col-sm-3'
+            />
+          <AdvancedOptionsSelector
+            isAdvanced={advanced}
+            onChange={handleAdvancedChange}
+            className='col-sm-3'
+          />
+        </div>
       </form>
       <Terminal command={command} />
-    </>
+    </div>
   )
 }
 
